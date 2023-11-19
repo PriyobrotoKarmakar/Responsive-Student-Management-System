@@ -1,0 +1,467 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", Cambria, Cochin, Georgia, Times, "Times New Roman",
+    serif;
+}
+:root {
+  --color-light: rgba(132, 139, 200, 0.18);
+  --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+body,
+.main {
+  background-color: #0f0d0d;
+}
+.nav-con {
+  transform: translateY(30px);
+}
+.cursor {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: rgba(227, 176, 225, 0.866);
+  position: fixed;
+  mix-blend-mode: difference;
+  z-index: 9;
+}
+.page1 {
+  height: 175vh;
+  width: 100vw;
+}
+.page2 {
+  min-height: 30vh;
+  width: 100vw;
+  border-bottom: 3px solid #7a7777;
+  padding: 100px 5vw;
+}
+.page3 {
+  min-height: 100vh;
+  width: 100vw;
+}
+.page4 {
+  min-height: 100vh;
+  width: 100vw;
+  padding: 100px;
+}
+.page5 {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  padding: 140px 100px;
+}
+
+.page1 h1 {
+  font-size: 8vw;
+  margin-top: 11vw;
+  margin-left: 6vw;
+  font-weight: 200;
+  color: white;
+}
+.page1 h2 {
+  font-size: 8vw;
+  margin-left: 26vw;
+  font-weight: 200;
+  color: white;
+}
+.page1 h3 {
+  font-size: 8vw;
+  margin-left: 66vw;
+  font-weight: 200;
+  color: white;
+}
+.page1 video {
+  padding-top: 30px;
+  width: 40%;
+  margin-top: 50 vw;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.page2 h1 {
+  font-size: 8vw;
+  font-weight: 300;
+  color: red;
+  padding: 100px 0;
+}
+#page2-container {
+  height: 60vh;
+  width: 100%;
+  /* background-color: red; */
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+.page2-left {
+  /* background-color: blue; */
+  width: 38%;
+}
+.page2-right {
+  /* background-color: blue; */
+  width: 30%;
+}
+.page2-left h2 {
+  font-size: 4vw;
+  font-weight: 300;
+  color: black;
+}
+
+.page2-right p {
+  font-size: 18px;
+  color: black;
+}
+.page2-right button {
+  width: 100%;
+  border-radius: 50px;
+  border: none;
+  padding: 4px0;
+  background-color: #edbfff;
+  color: black;
+  margin-top: 20px;
+  transition: ease all 0.6s;
+}
+.page2-right button:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+.page3 h1 {
+  color: black;
+  font-size: 6.8vw;
+  font-weight: 300;
+  padding-left: 5vw;
+  padding-top: 4vh;
+}
+.page3-part1 {
+  display: flex;
+  justify-content: space-between;
+}
+.my-class {
+  position: absolute;
+  height: 28vh;
+  width: 50vw;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
+  transform: translate(50px, -40px);
+}
+.my-class .vid {
+  overflow: hidden;
+  max-width: 44vw;
+  max-height: 23vh;
+  border-radius: 50px;
+  transform: translate(40px, -10px);
+}
+.my-class .vid video {
+  transform: translateY(-20px);
+}
+.my-class .class {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 100px;
+  border-radius: 50px;
+  background-color: #edbfff;
+  transform: translate(0px, -15px);
+}
+.attendence {
+  position: absolute;
+  height: 32vh;
+  width: 50vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-color: black;
+  border-radius: 50px;
+}
+.page3-part2 .am {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transform: translate(-30px, -30px);
+}
+.am h1 {
+  font-weight: 900;
+  color: white;
+  text-shadow: var(--box-shadow);
+}
+.am .btn button {
+  width: 90px;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 50px;
+  border: 1px white solid;
+  background-color: black;
+  color: white;
+  transition: 0.5s ease;
+}
+.am button:hover {
+  border: 1px black solid;
+  background-color: white;
+  color: black;
+  transform: scale(1.29);
+}
+.am button:active {
+  border: 1px green solid;
+  background-color: green;
+}
+.attendence .at {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 90px;
+}
+
+.page3-part2 .attendence .text {
+  display: flex;
+  height: 32vh;
+  width: 58vw;
+}
+.page3-part2 .attendence .text .t {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+.page3-part2 .attendence .text .t h4 {
+  color: white;
+  font-size: 30px;
+}
+
+.page3-part2 .attendence .text .img {
+  max-width: 400px;
+  height: 170px;
+  border-radius: 50px;
+  overflow: hidden;
+  transform: translate(20px, -10px);
+}
+.page3-part2 .attendence .text .img img {
+  transform: translate(0px, -300px);
+}
+.page3-part3 .my-class .con {
+  display: flex;
+}
+.page3-part3 .my-class .con .img {
+  height: 150px;
+  width: 400px;
+  overflow: hidden;
+  transform: translate(100px, -5px);
+  border-radius: 50px;
+}
+.page3-part3 .my-class .con .img img {
+  transform: translate(-60px, -360px);
+}
+.page3-part3 .my-class .con .h {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+.page3-part3 .my-class .con .h h4 {
+  color: white;
+  font-size: 35px;
+}
+.page3-part3 .attendence .mass-text {
+  color: white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.attendence .class {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 100px;
+  border-radius: 50px;
+  background-color: #edbfff;
+  transform: translate(0px, -15px);
+}
+.my-class {
+  animation-name: floating;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: -10px;
+}
+.attendence {
+  animation-name: floating;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 640px;
+  margin-top: 370px;
+}
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 5px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+.page3-part1 img {
+  height: 400px;
+  margin-top: 200px;
+  transition: 0.4s;
+}
+.page3-part1 img:hover {
+  transform: scale(1.02);
+}
+.page3-part1 video {
+  height: 25vw;
+  transition: 0.4s;
+}
+.page3-part1 video:hover {
+  transform: scale(1.02);
+}
+.page3-part2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+.page3-part2 img {
+  height: 400px;
+  margin-top: 200px;
+  transition: 0.4s;
+}
+.page3-part2 img:hover {
+  transform: scale(1.02);
+}
+.page3-part2 video {
+  height: 25vw;
+  transition: 0.4s;
+}
+.page3-part2 video:hover {
+  transform: scale(1.02);
+}
+.page3 .btn1 {
+  background-color: cyan;
+  border: none;
+  box-shadow: 0 0 5px cyan, 0 0 5px cyan;
+}
+.page3 .btn1:hover {
+  box-shadow: 0 0 5px cyan, 0 0 5px cyan, 0 0 5px cyan;
+}
+
+.page3-part3 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+.page3-part3 img {
+  height: 400px;
+  margin-top: 200px;
+  transition: 0.4s;
+}
+.page3-part3 img:hover {
+  transform: scale(1.02);
+}
+.page3-part3 video {
+  height: 25vw;
+  transition: 0.4s;
+}
+.page3-part3 video:hover {
+  transform: scale(1.02);
+}
+
+.page4 .elem {
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+  position: relative;
+}
+
+.page4 .elem img {
+  position: absolute;
+  height: 200px;
+  opacity: 0;
+  transition: all ease-out 0.5s;
+  transform: translateY(40%) rotate(2deg);
+}
+.page4 .elem img:nth-child(1) {
+  left: 2%;
+}
+.page4 .elem img:nth-child(3) {
+  right: 5%;
+}
+
+.text-div {
+  height: 115px;
+  overflow: hidden;
+}
+.elem h1 {
+  font-size: 7.3vw;
+  transition: all ease-out 0.5s;
+}
+.elem:hover h1 {
+  transform: translateY(-100%);
+  color: #edbfff;
+}
+.elem:hover img {
+  opacity: 1;
+  transform: translateY(2%) rotate(0deg);
+}
+.page5 h1 {
+  font-size: 4vw;
+  font-weight: 300;
+  color: white;
+  margin-bottom: 50px;
+}
+.page5 .box {
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  display: flex;
+  border-top: 1.5px solid #dadada;
+
+  padding: 0px 20px;
+  color: #dadada;
+}
+.box:nth-last-child(2) {
+  border-bottom: 1.5px solid #dadada;
+}
+
+.page5 a {
+  position: relative;
+  z-index: 9999;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  transition: all ease 0.5s;
+}
+
+.page5 i {
+  color: white;
+  position: relative;
+  z-index: 99999;
+  transition: all ease 0.5s;
+}
+.page5 .center5 {
+  height: 0%;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all ease 0.5s;
+}
+.page5 .box:hover .center5 {
+  height: 100%;
+}
+.page5 .box:hover a {
+  color: black;
+}
+.page5 .box:hover i {
+  color: black;
+}
