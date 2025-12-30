@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/payment.css" />
+
+    <title>Payment Method</title>
+  </head>
+  <body>
+    <div class="container">
+      <h6>LPU</h6>
+      <span>@</span>
+      <h1>Payment Method</h1>
+      <form action="/">
+        <label for="country"
+          >Country
+          <select name="country" id="country">
+            <option value="germany">germany</option>
+            <option value="england">england</option>
+            <option value="india">india</option>
+          </select>
+        </label>
+        <label for="cardno"
+          >Card Number
+          <input
+            type="text"
+            name="cardno"
+            id="cardno"
+            maxlength="19"
+            onkeypress="cardspace()"
+          />
+        </label>
+        <div class="float">
+          <label for="validtill"
+            >Valid till
+            <input
+              type="text"
+              name="validtill"
+              id="validtill"
+              maxlength="7"
+              onkeypress="addSlashes()"
+            />
+          </label>
+          <label for="cvv"
+            >Cvv
+            <input type="text" name="cvv" id="cvv" maxlength="3" />
+          </label>
+        </div>
+        <label for="checkbox">
+          <input type="checkbox" name="checkbox" id="checkbox" />
+          <p>
+            I agree to the <strong>terms</strong> and
+            <strong>conditions</strong> as set out by the user agreement.
+          </p></label
+        >
+        <button>Pay 92000₹</button>
+      </form>
+    </div>
+    <script src="../js/payment.js"></script>
+  </body>
+</html>
