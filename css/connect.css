@@ -97,3 +97,128 @@ textarea::-webkit-scrollbar-thumb {
 .container form #button:hover {
   opacity: 0.7;
 }
+
+/* ==================== RESPONSIVE MEDIA QUERIES ==================== */
+
+/* Tablet Devices (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+  .container {
+    margin-top: 20px;
+  }
+
+  .container form {
+    width: 600px;
+  }
+
+  .container form input {
+    width: 270px;
+  }
+
+  .container form #lastName,
+  .container form #mobile {
+    margin-left: 15px;
+  }
+
+  .container form h4 {
+    width: 560px;
+  }
+
+  .container form textarea {
+    min-width: 560px;
+    max-width: 560px;
+  }
+
+  .container form #button {
+    margin-right: 460px;
+  }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  body {
+    margin-top: 20px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .container {
+    margin-top: 20px;
+    padding: 0;
+  }
+
+  .container form {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    padding: 20px;
+  }
+
+  .container form h1 {
+    width: 100%;
+    font-size: 1.8rem;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+
+  .container form input {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .container form #lastName,
+  .container form #mobile {
+    margin-left: 0;
+  }
+
+  .container form h4 {
+    width: 100%;
+    font-size: 0.95rem;
+    margin-top: 15px;
+  }
+
+  .container form textarea {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100px;
+    max-height: 150px;
+  }
+
+  .container form #button {
+    margin-right: 0;
+    width: 100%;
+    max-width: 120px;
+    margin: 20px auto;
+    display: block;
+  }
+}
+
+/* Small Mobile Devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  .container form {
+    max-width: 95%;
+    padding: 15px;
+  }
+
+  .container form h1 {
+    font-size: 1.5rem;
+  }
+
+  .container form input {
+    font-size: 14px;
+    height: 38px;
+  }
+
+  .container form h4 {
+    font-size: 0.9rem;
+  }
+
+  .container form textarea {
+    font-size: 14px;
+    min-height: 80px;
+  }
+
+  .container form #button {
+    max-width: 100px;
+    height: 38px;
+  }
+}

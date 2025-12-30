@@ -73,3 +73,59 @@ nav {
     transform: translate(0, -0px);
   }
 }
+
+/* ==================== RESPONSIVE MEDIA QUERIES ==================== */
+
+/* Tablet Devices (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+  nav ul li {
+    padding: 5px 20px;
+    margin: 8px;
+    font-size: 16px;
+  }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .nav-con {
+    padding: 0 10px;
+  }
+
+  nav {
+    border-radius: 30px;
+    padding: 5px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+  }
+
+  nav ul li {
+    padding: 8px 15px;
+    margin: 5px;
+    font-size: 14px;
+  }
+
+  /* Disable floating animation on mobile */
+  nav {
+    animation: none;
+  }
+}
+
+/* Small Mobile Devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  nav {
+    border-radius: 20px;
+  }
+
+  nav ul li {
+    padding: 6px 12px;
+    margin: 4px;
+    font-size: 12px;
+  }
+}

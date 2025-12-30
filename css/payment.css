@@ -126,3 +126,103 @@ button:hover {
   background-color: black;
   color: white;
 }
+
+/* ==================== RESPONSIVE MEDIA QUERIES ==================== */
+
+/* Tablet Devices (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 400px;
+  }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 400px;
+    padding: 25px;
+  }
+
+  h1 {
+    padding: 20px 0;
+    font-size: 32px;
+  }
+
+  h6 {
+    font-size: 18px;
+  }
+
+  span {
+    right: 28px;
+    top: 24px;
+    font-size: 16px;
+  }
+
+  .float {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  #validtill,
+  #cvv {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin-left: 0;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  form label {
+    font-size: 9px;
+  }
+
+  form select,
+  form #cardno {
+    font-size: 16px;
+  }
+
+  button {
+    height: 45px;
+    font-size: 16px;
+  }
+}
+
+/* Small Mobile Devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  h1 {
+    padding: 15px 0;
+    font-size: 28px;
+  }
+
+  h6 {
+    font-size: 16px;
+  }
+
+  span {
+    right: 24px;
+    top: 22px;
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  button {
+    height: 42px;
+  }
+}

@@ -1,4 +1,4 @@
-// Initialize GSAP and ScrollTrigger
+// Initialize GSAP and ScrollTrigger (Native Scroll - No LocomotiveScroll)
 gsap.registerPlugin(ScrollTrigger);
 
 // Custom cursor following mouse
@@ -16,59 +16,16 @@ if (crsr && main) {
   });
 }
 
-// Check if we're on mobile (where LocomotiveScroll might cause issues)
-const isMobile = window.innerWidth < 768;
-
-// Only use LocomotiveScroll on desktop
-if (!isMobile) {
-  try {
-    const locoScroll = new LocomotiveScroll({
-      el: document.querySelector(".main"),
-      smooth: true,
-      multiplier: 1,
-      lerp: 0.05,
-    });
-
-    // Sync LocomotiveScroll with ScrollTrigger
-    locoScroll.on("scroll", ScrollTrigger.update);
-
-    ScrollTrigger.scrollerProxy(".main", {
-      scrollTop(value) {
-        return arguments.length
-          ? locoScroll.scrollTo(value, 0, 0)
-          : locoScroll.scroll.instance.scroll.y;
-      },
-      getBoundingClientRect() {
-        return {
-          top: 0,
-          left: 0,
-          width: window.innerWidth,
-          height: window.innerHeight,
-        };
-      },
-      pinType: document.querySelector(".main").style.transform
-        ? "transform"
-        : "fixed",
-    });
-
-    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-    ScrollTrigger.refresh();
-  } catch (error) {
-    console.warn("LocomotiveScroll initialization failed:", error);
-  }
-}
-
 // Page 1 animations - parallax effect on headings
 const page1H1 = document.querySelector(".page1 h1");
 if (page1H1) {
   var tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".page1 h1",
-      scroller: isMobile ? "body" : ".main",
       start: "top 50%",
       end: "top 10%",
       scrub: 1,
-      markers: false, // Set to true for debugging
+      markers: false,
     },
   });
 
@@ -88,7 +45,6 @@ if (page2Element) {
   var tl2 = gsap.timeline({
     scrollTrigger: {
       trigger: ".page2",
-      scroller: isMobile ? "body" : ".main",
       start: "top 80%",
       end: "top 60%",
       scrub: 1,
@@ -106,7 +62,6 @@ if (page4Element) {
   var tl3 = gsap.timeline({
     scrollTrigger: {
       trigger: ".page4",
-      scroller: isMobile ? "body" : ".main",
       start: "top 80%",
       end: "top 60%",
       scrub: 1,
@@ -121,22 +76,24 @@ if (page4Element) {
 // Page 5 box hover animations
 var boxes = document.querySelectorAll(".box");
 boxes.forEach(function (elem) {
-  // Add smooth hover effects using GSAP
-  elem.addEventListener("mouseenter", function () {
-    gsap.to(elem.querySelector(".center5"), {
-      height: "100%",
-      duration: 0.4,
-      ease: "power2.out",
+  const center = elem.querySelector(".center5");
+  if (center) {
+    elem.addEventListener("mouseenter", function () {
+      gsap.to(center, {
+        height: "100%",
+        duration: 0.4,
+        ease: "power2.out",
+      });
     });
-  });
 
-  elem.addEventListener("mouseleave", function () {
-    gsap.to(elem.querySelector(".center5"), {
-      height: "0%",
-      duration: 0.4,
-      ease: "power2.out",
+    elem.addEventListener("mouseleave", function () {
+      gsap.to(center, {
+        height: "0%",
+        duration: 0.4,
+        ease: "power2.out",
+      });
     });
-  });
+  }
 });
 
 // Refresh ScrollTrigger on window resize (debounced)

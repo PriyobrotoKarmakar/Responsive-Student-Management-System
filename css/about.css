@@ -1,85 +1,180 @@
 :root {
-    --color-light: rgba(132, 139, 200, 0.18);
-    --box-shadow: 0 2rem 3rem var(--color-light);
-  }
-  
-  body,
-  .main {
-    background-color: #0f0d0d;
-  }
-.nav-con{
+  --color-light: rgba(132, 139, 200, 0.18);
+  --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+body,
+.main {
+  background-color: #0f0d0d;
+}
+.nav-con {
   margin-top: 85px;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: -60px;
-    padding: 0;
-    background-color: #f2f2f2;
-    color: #333;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: -60px;
+  padding: 0;
+  background-color: #f2f2f2;
+  color: #333;
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
-    color: #fff;
-    text-align: center;
-    padding: 1em;
-    width: 70%;
-    border-radius: 20px;
-    transform: translate(230px,10px);
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  text-align: center;
+  padding: 1em;
+  width: 70%;
+  border-radius: 20px;
+  transform: translate(230px, 10px);
 }
 
 section {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter:  blur(90px);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    color: white;
-    transform: translate(0,80px);
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(90px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  color: white;
+  transform: translate(0, 80px);
 }
 
 a {
-    color: #4285f4;
-    text-decoration: none;
+  color: #4285f4;
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 footer {
-    text-align: center;
-    padding: 1em;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
-    color: #fff;
-    position: fixed;
-    bottom: 0;
-    width:70%;
-    transform: translate(270px,10px);
+  text-align: center;
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 70%;
+  transform: translate(270px, 10px);
 }
-.back-video{
+.back-video {
   z-index: -1;
   position: absolute;
   right: 0;
-  bottom:0;
+  bottom: 0;
 }
-@media (min-aspect-ratio:16/9) {
+@media (min-aspect-ratio: 16/9) {
+  .back-video {
+    width: 100%;
+    height: auto;
+  }
+}
 
-  .back-video{
-  width: 100%;
-  height: auto;
-}
+@media (max-aspect-ratio: 16/9) {
+  .back-video {
+    width: auto;
+    height: 100%;
+  }
 }
 
-@media (max-aspect-ratio:16/9) {
+/* ==================== RESPONSIVE MEDIA QUERIES ==================== */
 
-  .back-video{
-  width: auto;
-  height: 100%;
+/* Tablet Devices (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+  header {
+    width: 80%;
+    transform: translate(120px, 10px);
+    padding: 0.8em;
+  }
+
+  section {
+    max-width: 700px;
+    padding: 15px;
+    transform: translate(0, 60px);
+  }
+
+  footer {
+    width: 80%;
+    transform: translate(120px, 10px);
+  }
 }
+
+/* Mobile Devices (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-con {
+    margin-top: 20px;
+  }
+
+  header {
+    width: 90%;
+    transform: translate(0, 0);
+    margin: 20px auto;
+    padding: 0.8em;
+    font-size: 0.9rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  section {
+    max-width: 100%;
+    margin: 10px;
+    padding: 15px;
+    transform: translate(0, 40px);
+    font-size: 0.9rem;
+  }
+
+  section p {
+    text-align: justify;
+    line-height: 1.6;
+  }
+
+  footer {
+    width: 90%;
+    transform: translate(0, 0);
+    margin: 0 auto;
+    position: relative;
+    margin-top: 100px;
+    padding: 0.8em;
+    font-size: 0.85rem;
+  }
+
+  .back-video {
+    object-fit: cover;
+  }
+}
+
+/* Small Mobile Devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  header {
+    width: 95%;
+    padding: 0.6em;
+  }
+
+  header h1 {
+    font-size: 1.3rem;
+  }
+
+  section {
+    margin: 5px;
+    padding: 12px;
+    font-size: 0.85rem;
+  }
+
+  footer {
+    width: 95%;
+    font-size: 0.75rem;
+    padding: 0.6em;
+  }
 }

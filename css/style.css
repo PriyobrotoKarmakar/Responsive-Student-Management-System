@@ -232,3 +232,122 @@ body {
 .container.active .toggle-right {
   transform: translateX(200%);
 }
+
+/* ==================== RESPONSIVE MEDIA QUERIES ==================== */
+
+/* Tablet Devices (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 700px;
+    min-height: 450px;
+  }
+
+  .toggle-container {
+    border-radius: 120px 0 0 80px;
+  }
+
+  .container.active .toggle-container {
+    border-radius: 0 120px 80px 0;
+  }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 500px;
+    min-height: 550px;
+    flex-direction: column;
+  }
+
+  .form-container {
+    width: 100%;
+    position: relative;
+  }
+
+  .sign-in,
+  .sign-up {
+    width: 100%;
+    left: 0;
+  }
+
+  .container.active .sign-in {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  .container.active .sign-up {
+    transform: translateY(0);
+  }
+
+  .toggle-container {
+    display: none;
+  }
+
+  .container form {
+    padding: 0 30px;
+  }
+
+  .container button,
+  .btn {
+    padding: 10px 35px;
+    font-size: 11px;
+  }
+
+  .social-icons a {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* Small Mobile Devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    max-width: 100%;
+    min-height: 500px;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .container form {
+    padding: 0 20px;
+  }
+
+  .container h1 {
+    font-size: 1.5rem;
+  }
+
+  .container p {
+    font-size: 13px;
+    margin: 15px 0;
+  }
+
+  .container input {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .container button,
+  .btn {
+    padding: 8px 30px;
+    font-size: 10px;
+  }
+
+  .social-icons {
+    margin: 15px 0;
+  }
+
+  .social-icons a {
+    width: 32px;
+    height: 32px;
+    margin: 0 2px;
+  }
+}

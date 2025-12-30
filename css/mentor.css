@@ -13,7 +13,7 @@
   --body-color: hsl(212, 42%, 15%);
   --container-color: hsl(212, 42%, 20%);
 }
-body{
+body {
   margin-top: 30px;
 }
 /* card */
@@ -27,9 +27,9 @@ body{
   padding-block: 5rem;
 }
 .card__containe {
-    display: flex;
+  display: flex;
   margin-inline: 1.75rem;
-  
+
   border-radius: 1.25rem;
   overflow: hidden;
 }
@@ -37,7 +37,7 @@ body{
   width: 300px;
   border-radius: 1.25rem;
   /* overflow: hidden; */
-  margin:auto 13px;
+  margin: auto 13px;
   transform: translateY(0px);
 }
 .card__image {
@@ -60,14 +60,14 @@ body{
   opacity: 0;
   transition: all ease 0.9s;
 }
-.card__article:hover .card__data{
+.card__article:hover .card__data {
   opacity: 1;
   z-index: 99;
   transform: scale(1.13);
 }
-.card__article:hover .card__image{
+.card__article:hover .card__image {
   background-color: black;
-  transform: scale(.95);
+  transform: scale(0.95);
 }
 
 .card__image {
@@ -75,27 +75,25 @@ body{
   display: flex;
   margin: 0 auto;
   justify-content: center;
-  
+
   position: relative;
   z-index: 5;
 }
-.card__shadow{
-    width: 200px;
-    height: 200px;
-    background-color: var(--first-color-alt);
-    border-radius: 50%;
-    top: 3.75rem;
-    left: 0;
-    right: 0;
-    margin-inline: auto;
-    filter: blur(45px);
-
+.card__shadow {
+  width: 200px;
+  height: 200px;
+  background-color: var(--first-color-alt);
+  border-radius: 50%;
+  top: 3.75rem;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  filter: blur(45px);
 }
-.card__name{
-    font-size: 25px;
-    font-weight: 500;
-    margin-bottom: .75rem;
-
+.card__name {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
 }
 
 .card__description {
@@ -106,8 +104,112 @@ body{
 .card__button {
   display: inline-block;
   background-color: var(--first-color);
-  padding: .75rem 1.5rem;
-  border-radius: .25rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem;
   color: var(--dark-color);
   font-weight: 600;
+}
+
+/* ==================== RESPONSIVE MEDIA QUERIES ==================== */
+
+/* Tablet Devices (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+  .card__containe {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .card__article {
+    width: 280px;
+    margin: 10px;
+  }
+
+  .card__data {
+    padding: 1.2rem 1.5rem;
+  }
+
+  .card__name {
+    font-size: 22px;
+  }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  body {
+    margin-top: 20px;
+  }
+
+  .card__container {
+    padding-block: 3rem;
+  }
+
+  .card__containe {
+    flex-direction: column;
+    align-items: center;
+    margin-inline: 1rem;
+  }
+
+  .card__article {
+    width: 90%;
+    max-width: 350px;
+    margin: 15px auto;
+  }
+
+  .card__image {
+    padding-top: 1.2rem;
+  }
+
+  .card__data {
+    padding: 1.2rem 1.5rem;
+    transform: translateY(-60px);
+  }
+
+  .card__article:hover .card__data {
+    transform: scale(1.05) translateY(-60px);
+  }
+
+  .card__name {
+    font-size: 20px;
+  }
+
+  .card__description {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .card__button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small Mobile Devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  .card__article {
+    width: 95%;
+  }
+
+  .card__data {
+    padding: 1rem 1.2rem;
+  }
+
+  .card__name {
+    font-size: 18px;
+  }
+
+  .card__description {
+    font-size: 0.85rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .card__button {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .card__shadow {
+    width: 150px;
+    height: 150px;
+  }
 }
